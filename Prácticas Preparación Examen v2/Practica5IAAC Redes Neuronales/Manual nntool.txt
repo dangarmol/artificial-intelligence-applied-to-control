@@ -1,0 +1,31 @@
+ 
+  To get started on a new problem do the following
+  
+  1. Import  Input and Target data from the workspace with [IMPORT].
+  2. Create a new Network with [NEW].
+  3. Select the network in the Network list and click [OPEN]
+  4. Select the training tab in the Network Window.
+  5. Select training input and target data, and click [TRAIN].
+  6. You can also use the Network Window to simulate the network, or
+      perform other tasks such as reinitialization and editing of weights.
+  
+  Here are descriptions of each button
+  
+  [IMPORT] - Imports data and networks from the workspace or a file.
+  [NEW] - Allows you to create a network or data within a dialog.
+  [OPEN] - Opens the selected data or network for viewing and editing.
+  [EXPORT] - Exports data and networks to the workspace or a file.
+  [DELETE] - Removes the selected data or network.
+  [HELP] - Opens this window.
+  
+  Here are descriptions of each list
+  
+  Networks - List of networks.
+  Inputs - Data to present to a network.
+  Targets - Data defining the desired network outputs.
+  Outputs - Response of a network to its inputs.
+  Errors - Difference between targets and outputs.
+  Input Delays - Input delay states for networks with input delays.
+  Layer Delays - Layer delay states for networks with layer delays.
+  
+  See Neural Network Toolbox user's guide for more information.

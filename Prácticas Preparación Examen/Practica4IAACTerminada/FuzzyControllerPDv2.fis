@@ -1,0 +1,40 @@
+[System]
+Name='FuzzyControllerPDv2'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=4
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Error'
+Range=[0 1]
+NumMFs=2
+MF1='-':'trapmf',[-0.321 -0.0463 0.3 0.7]
+MF2='+':'trapmf',[0.3 0.69973544973545 1.04 1.36]
+
+[Input2]
+Name='DerivadaError'
+Range=[0 1]
+NumMFs=2
+MF1='-':'trapmf',[-0.321 -0.0463 0.3 0.7]
+MF2='+':'trapmf',[0.3 0.6997 1.04 1.36]
+
+[Output1]
+Name='Salida'
+Range=[0 1]
+NumMFs=3
+MF1='CN':'trapmf',[-0.421 -0.101 0.1 0.5]
+MF2='ControlZero':'trimf',[0.1 0.5 0.9]
+MF3='CP':'trapmf',[0.5 0.9 1 1]
+
+[Rules]
+2 2, 3 (1) : 1
+2 1, 2 (1) : 1
+1 2, 2 (1) : 1
+1 1, 1 (1) : 1

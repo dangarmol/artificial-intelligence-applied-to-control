@@ -1,0 +1,28 @@
+Hay que guardar las funciones como "Whoknows" en Documentos\MATLAB
+La gráfica tiene un delay de 1s.
+
+
+2.1.b)
+To (retardo), será 6s
+
+K (valor estacionario), será 83,3
+
+Tp (tiempo de subida) 11s
+
+
+En Simulink: Numerator en transfer fcn, será [83.3], y denominator [11 1].
+
+En el bloque delay, el retardo será 6s.
+
+
+2.1.c) No es posible porque usando el anterior sistema no podemos expresar sobreelongación,
+ya que no superará nunca el valor máximo de la función por ser una fracción de ese tipo, ya que siempre será creciente.
+
+
+
+
+PID: 	Kp = (1.2 * Tp) / (K * To) = (1.2 * 11) / (83.3 * 6) = 13.2 / 499.8 = 0,0264
+	Ti = 2 * To = 2 * 6 = 12
+	Td = 0.5 * To = 0.5 * 6 = 3
+
+	Tp = 18 - 7 = 11s

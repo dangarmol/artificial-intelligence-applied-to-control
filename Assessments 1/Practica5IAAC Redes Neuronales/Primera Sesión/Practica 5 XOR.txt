@@ -1,0 +1,12 @@
+Práctica Redes Neuronales XOR
+
+>> input = [0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1; 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1];
+>> output = [0 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0];
+>> nntool
+
+//Tras construir la red...
+
+>> salida = round(network1([0;0])); salida = 0;
+>> salida = round(network1([0;1])); salida = 1;
+>> salida = round(network1([1;1])); salida = 0;
+>> salida = round(network1([1;0])); salida = 1;

@@ -1,0 +1,51 @@
+[System]
+Name='FuzzyControllerPIDv5'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=1
+NumRules=8
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Error'
+Range=[0 1]
+NumMFs=2
+MF1='EN':'trapmf',[-0.321 -0.0463 0.2 0.8]
+MF2='EP':'trapmf',[0.2 0.8 1.04 1.36]
+
+[Input2]
+Name='DerivadaError'
+Range=[0 1]
+NumMFs=2
+MF1='DEN':'trapmf',[-0.321 -0.0463 0.2 0.8]
+MF2='DEP':'trapmf',[0.2 0.8 1.04 1.36]
+
+[Input3]
+Name='IntegralError'
+Range=[0 1]
+NumMFs=2
+MF1='IEN':'trapmf',[-0.128 -0.0278 0.202 0.794973544973545]
+MF2='IEP':'trapmf',[0.202380952380952 0.8 1.04 1.36]
+
+[Output1]
+Name='Salida'
+Range=[0 1]
+NumMFs=3
+MF1='CN':'trapmf',[-0.421 -0.101 0.1 0.33994708994709]
+MF2='ControlZero':'trimf',[0.1 0.5 0.9]
+MF3='CP':'trapmf',[0.662698412698413 0.9 1 1]
+
+[Rules]
+1 1 0, 1 (1) : 1
+1 1 2, 1 (1) : 1
+1 2 1, 1 (1) : 1
+1 2 2, 3 (1) : 1
+2 2 2, 3 (1) : 1
+2 2 0, 3 (1) : 1
+2 1 2, 3 (1) : 1
+2 1 0, 2 (1) : 1

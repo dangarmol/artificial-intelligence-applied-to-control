@@ -1,0 +1,2 @@
+>> figure(2),plot(datos.base),hold on,plot(nnBase_outputs,'r')
+Para ver la gráfica de la base
